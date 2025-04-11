@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:get/get.dart';
 
 import '../modules/BottomNav/bindings/bottom_nav_binding.dart';
@@ -10,12 +8,16 @@ import '../modules/curate/bindings/curate_binding.dart';
 import '../modules/curate/views/curate_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/internet/bindings/internet_binding.dart';
+import '../modules/internet/views/internet_view.dart';
 import '../modules/more/bindings/more_binding.dart';
 import '../modules/more/views/more_view.dart';
 import '../modules/sale/bindings/sale_binding.dart';
 import '../modules/sale/views/sale_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+
+// ignore_for_file: constant_identifier_names
 
 part 'app_routes.dart';
 
@@ -66,6 +68,11 @@ class AppPages {
       name: _Paths.MORE,
       page: () => const MoreView(),
       binding: MoreBinding(),
+    ),
+    GetPage(
+      name: _Paths.INTERNET,
+      page: () => const InternetView(),
+      binding: InternetBinding(),
     ),
   ];
 }

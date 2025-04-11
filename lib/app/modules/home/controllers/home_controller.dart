@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:get/get.dart';
+import 'package:kombee_demo/app/modules/internet/controllers/internet_controller.dart';
 import 'package:kombee_demo/constant/api.dart';
 import 'package:kombee_demo/models/bottom_model.dart';
 import 'package:kombee_demo/models/middle_model.dart';
@@ -17,6 +18,8 @@ class HomeController extends GetxController {
 
   bool isLoading = true;
 
+  final internet = Get.find<InternetController>(); // ✅ Injected here
+
   @override
   void onInit() {
     super.onInit();
@@ -24,6 +27,11 @@ class HomeController extends GetxController {
   }
 
   Future<void> fetchAllData() async {
+    if (!internet.isConnected.value) {
+      EasyLoading.showError("No Internet Connection");
+      return;
+    }
+
     try {
       isLoading = true;
       update();

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kombee_demo/app/modules/internet/controllers/internet_controller.dart';
 import 'package:kombee_demo/common_export/common_export.dart';
 import 'package:kombee_demo/common_export/home_common_export.dart';
+import 'package:kombee_demo/common_widgets/no_internet.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,7 +11,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(HomeController());
-
+    final internet = Get.find<InternetController>();
     return GetBuilder<HomeController>(
       builder: (controller) {
         return Scaffold(
@@ -18,10 +20,26 @@ class HomeView extends StatelessWidget {
             isCenter: false,
             action: _actionWidgets(),
           ),
-          body: RefreshIndicator(
-            onRefresh: () async => controller.onInit(),
-            child: _buildContent(controller),
-          ),
+          body: Obx(() {
+            final isConnected = internet.isConnected.value;
+
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                if (!isConnected) ...[
+                  NoInternetWidget(),
+                ],
+                if (isConnected)
+                  Expanded(
+                    child: RefreshIndicator(
+                      onRefresh: () async => controller.onInit(),
+                      child: _buildContent(controller),
+                    ),
+                  ),
+              ],
+            );
+          }),
         );
       },
     );

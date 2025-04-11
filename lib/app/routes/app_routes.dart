@@ -13,6 +13,7 @@ abstract class Routes {
   static const CURATE = _Paths.CURATE;
   static const SALE = _Paths.SALE;
   static const MORE = _Paths.MORE;
+  static const INTERNET = _Paths.INTERNET;
 }
 
 abstract class _Paths {
@@ -24,4 +25,5 @@ abstract class _Paths {
   static const CURATE = '/curate';
   static const SALE = '/sale';
   static const MORE = '/more';
+  static const INTERNET = '/internet';
 }
