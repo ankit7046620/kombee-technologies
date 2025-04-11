@@ -4,7 +4,7 @@ This is a practical Flutter project submission built using the **BLoC** pattern 
 
 ## 🔧 Requirements
 
-- **Flutter Version:** 3.29.0 *(This ensures consistency across all submissions)*
+- **Flutter Version:** 3.29.0  
 - Dart SDK: Comes bundled with Flutter
 
 ## 📦 Dependencies
