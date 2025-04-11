@@ -25,7 +25,7 @@ void main() async {
               useMaterial3: false,
               primaryColor: Colors.white,
             ),
-            title: "EasternInterview",
+            title: "kombee",
             initialRoute: AppPages.INITIAL,
             getPages: AppPages.routes,
           );
