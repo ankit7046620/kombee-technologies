@@ -11,7 +11,7 @@ This is a practical Flutter project submission built using the **BLoC** pattern 
 
 This project uses the following main packages:
 
-- `get`: State management
+- `getx`: State management
 - `flutter_easyloading`: Loading indicators
 - `expandable`: Expandable panels
 - `connectivity_plus`: Internet connectivity handling
