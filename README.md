@@ -1,16 +1,24 @@
-# kombee_demo
+ # Kombee Demo App
 
-A new Flutter project.
+This is a practical Flutter project submission built using the **BLoC** pattern and modern Flutter best practices.
 
-## Getting Started
+## 🔧 Requirements
 
-This project is a starting point for a Flutter application.
+- **Flutter Version:** 3.29.0 *(This ensures consistency across all submissions)*
+- Dart SDK: Comes bundled with Flutter
 
-A few resources to get you started if this is your first Flutter project:
+## 📦 Dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project uses the following main packages:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `get`: State management
+- `flutter_easyloading`: Loading indicators
+- `expandable`: Expandable panels
+- `connectivity_plus`: Internet connectivity handling
+- `shimmer`: Placeholder shimmer loading
+- `persistent_bottom_nav_bar`: Bottom navigation
+
+For full dependency list, check `pubspec.yaml`.
+
+## 📁 Project Structure
+
